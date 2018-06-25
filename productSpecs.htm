@@ -1,0 +1,81 @@
+
+<style>
+    .pagination a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+
+    .pagination a.active {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+    .pagination a:active {
+        background-color: dodgerblue;
+    }
+
+    .thumbnail {
+        margin-top: 20%;
+        margin-bottom: 20%;
+        height:100%;
+    }
+
+    .info {
+        margin-top: 20%;
+        margin-bottom: 20%;
+    }
+</style>
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="thumbnail">
+
+                <img id="default_img" src="..\..\image\laptop.png">
+                <div class="text-center">
+                    <ul class="pagination">
+
+                        <li>
+                            <a  onclick="image_change(1)">1</a>
+                        </li>
+                        <li>
+                            <a  onclick="image_change(2)">2</a>
+                        </li>
+                        <li>
+                            <a  onclick="image_change(3)">3</a>
+                        </li>
+                        <li>
+                            <a  onclick="image_change(4)">4</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-round">Add to Cart</button>
+                   <a href="#/orderSummary" ><button  class="btn btn-round">Buy Now</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <ul class="info">
+                <p>Product Name</p>
+                <p>{{name}}</p>
+                <p>Price</p>
+                <p>{{price}}</p>
+                <p>Description</p>
+                <p>Specifications</p>
+
+
+            </ul>
+        </div>
+    </div>
+</div>
